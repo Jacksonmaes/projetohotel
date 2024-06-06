@@ -35,15 +35,16 @@ export interface IRoom extends Document {
     isAirConditioned: Boolean;
     isPetsAllowed: Boolean;
     ratings: number;
-    numOfReviews: Number;
+    numOfReviews: number;
     images: IImage[];
     category: String;
     reviews: IReview[];
     user: mongoose.Schema.Types.ObjectId;
     createdAt: Date;
+    isRoomCleaning: Boolean;
 }
 
-const roomSchema: Schema = new Schema({
+const roomSchema: Schema<IRoom> = new Schema({
   name: {
     type: String,
     required : [true, "Please enter room name"],
@@ -52,7 +53,7 @@ const roomSchema: Schema = new Schema({
  },
  description: {
    type: String,
-   required: [true, "Please enter room name"],
+   required: [true, "Please enter room description"],
  },
  pricePerNight: {
    type: Number,
@@ -129,7 +130,7 @@ const roomSchema: Schema = new Schema({
    type: String,
    required: [true, "Please enter room category"],
    enum:{
-     values: ["king", "Single", "Twins"],
+     values: ["King", "Single", "Twins"],
      message: "Please select correct category for room",   
    },
  },      

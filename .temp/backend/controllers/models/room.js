@@ -10,7 +10,7 @@ var roomSchema = new mongoose_1.Schema({
     },
     description: {
         type: String,
-        required: [true, "Please enter room name"],
+        required: [true, "Please enter room description"],
     },
     pricePerNight: {
         type: Number,
@@ -84,7 +84,7 @@ var roomSchema = new mongoose_1.Schema({
         type: String,
         required: [true, "Please enter room category"],
         enum: {
-            values: ["king", "Single", "Twins"],
+            values: ["King", "Single", "Twins"],
             message: "Please select correct category for room",
         },
     },
