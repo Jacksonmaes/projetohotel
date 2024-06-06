@@ -7,7 +7,7 @@ const Header: React.FC = () => {
 
   const { data } = useSession();
 
-
+console.log
     return (
         <nav className="navbar sticky-top py-2">
         <div className="container">
