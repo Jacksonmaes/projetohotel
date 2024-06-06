@@ -34,7 +34,7 @@ console.log
               >
                 <figure className="avatar avatar-nav">
                   <img
-                    src={data?.user?.avatar ? data?.user?.avatar.url : "/images/default_avatar.jpg"
+                    src={data?.user?.avatar ? data?.user?.avatar.url : "/images/default_avatar.jpg"}
                     alt="John Doe"
                     className="rounded-circle placeholder-glow"
                     height="50"
